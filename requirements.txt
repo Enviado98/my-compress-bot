@@ -1,4 +1,4 @@
 python-telegram-bot==20.5
 moviepy==1.0.3
-fastapi==0.118.2
+fastapi==0.120.2
 uvicorn[standard]==0.23.2
