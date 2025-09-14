@@ -19,7 +19,7 @@ logging.basicConfig(level=logging.INFO)
 # Leer variables de entorno
 API_ID = int(os.environ.get("API_ID"))
 API_HASH = os.environ.get("API_HASH")
-BOT_TOKEN = os.getenv("TELEGRAM_BOT")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 DEFAULT_VIDEO_QUALITY = "720p"
 
