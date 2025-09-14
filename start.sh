@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# Usar puerto que Render asigna
-export PORT=${PORT:-8080}
+# Evitar que el contenedor se detenga
+set -e
 
-# Iniciar el Userbot
+echo "Iniciando Telegram Userbot..."
+
+# Ejecutar el bot
 python3 bot.py
