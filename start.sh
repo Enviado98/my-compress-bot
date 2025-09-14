@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Iniciar el bot de Telegram
+# Iniciar el bot de Telegram en segundo plano
 python3 bot.py &
 
-# Iniciar el servidor FastAPI
-uvicorn main:app --host 0.0.0.0 --port 8080
+# Mantener el contenedor activo con un servidor HTTP mínimo
+python3 -m http.server 8080
