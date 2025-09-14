@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Iniciar el bot de Telegram en segundo plano
+# Iniciar el bot de Telegram
 python3 bot.py &
 
-# Iniciar el servidor FastAPI para que Render no lo detenga
-uvicorn main:app --host 0.0.0.0 --port 8080
+# Mantener puerto abierto para Render (aunque no uses FastAPI)
+while true; do sleep 1000; done
