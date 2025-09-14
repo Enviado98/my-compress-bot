@@ -1,7 +1,7 @@
 # Imagen base ligera de Python
 FROM python:3.11-slim
 
-# Evitar preguntas interactivas al instalar paquetes
+# Evitar preguntas interactivas
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Instalar dependencias del sistema
@@ -20,11 +20,11 @@ RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 # Copiar todo el proyecto
 COPY . .
 
-# Dar permisos de ejecución al start.sh
+# Dar permisos al start.sh
 RUN chmod +x start.sh
 
-# Abrir el puerto que Render asigna
+# Abrir el puerto asignado por Render
 EXPOSE 8080
 
-# Ejecutar start.sh al iniciar el contenedor
+# Ejecutar start.sh
 CMD ["./start.sh"]
