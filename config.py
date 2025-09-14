@@ -1,7 +1,6 @@
 import os
 
-# Token del bot de Telegram (puedes usar variable de entorno en producción)
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN", "TU_TOKEN_AQUI")
-
-# Calidad de video por defecto
-DEFAULT_VIDEO_QUALITY = "720p"
+API_ID = int(os.environ.get("API_ID", 0))
+API_HASH = os.environ.get("API_HASH", "")
+SESSION_NAME = os.environ.get("SESSION_NAME", "userbot_session")
+DEFAULT_VIDEO_QUALITY = os.environ.get("DEFAULT_VIDEO_QUALITY", "360p")
