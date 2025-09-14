@@ -3,5 +3,5 @@
 # Iniciar el bot de Telegram en segundo plano
 python3 bot.py &
 
-# Iniciar el servidor FastAPI en el puerto que Render asigna
-uvicorn main:app --host 0.0.0.0 --port ${PORT:-8080}
+# Iniciar el servidor FastAPI para que Render no lo detenga
+uvicorn main:app --host 0.0.0.0 --port 8080
