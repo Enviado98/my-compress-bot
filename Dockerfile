@@ -20,7 +20,10 @@ RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 # Copiar todo el proyecto
 COPY . .
 
-# Abrir el puerto que Render asigna
+# Dar permisos de ejecución al start.sh
+RUN chmod +x start.sh
+
+# Abrir el puerto que Render asigna (aunque no usamos uvicorn)
 EXPOSE 8080
 
 # Ejecutar start.sh al iniciar el contenedor
