@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Iniciar el bot de Telegram
-python3 bot.py &
+# Usar puerto que Render asigna
+export PORT=${PORT:-8080}
 
-# Mantener puerto abierto para Render (aunque no uses FastAPI)
-while true; do sleep 1000; done
+# Iniciar el Userbot
+python3 bot.py
