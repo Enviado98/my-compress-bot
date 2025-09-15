@@ -1,13 +1,12 @@
 from fastapi import FastAPI
-import os
+from bot import app as userbot_app
 
 app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"status": "Bot activo"}
+    return {"status": "UserBot activo 🚀"}
 
-# Endpoint opcional para revisar la cola de tareas
 @app.get("/status")
 def status():
-    return {"status": "Bot activo", "message": "Lista de tareas activa"}
+    return {"status": "UserBot activo", "queue_length": "Por implementar"}
