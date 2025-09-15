@@ -1,9 +1,7 @@
 #!/bin/bash
-
-# Evitar que el contenedor se detenga
 set -e
 
-echo "Iniciando Telegram Userbot..."
+echo "Iniciando UserBot con FastAPI..."
 
-# Ejecutar el bot
-python3 bot.py
+# Ejecutar el servidor
+uvicorn server:app --host 0.0.0.0 --port 8080
